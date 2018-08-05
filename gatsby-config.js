@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Gatsby Lightbox Starter',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'gatsby-starter-lightbox',
+        short_name: 'starter-lightbox',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
