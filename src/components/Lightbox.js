@@ -94,7 +94,7 @@ class Lightbox extends Component {
 }
 
 const StyledImg = styled(Img)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
