@@ -1,16 +1,19 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Lightbox from '../components/Lightbox'
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
+      <h1>Hi people</h1>
+      <p>Welcome to your new Gatsby site.</p>
+      <p>Now go build something great.</p>
+      <Lightbox images={data.allImageSharp.edges} />
+    </Layout>
+  )
+}
 
 export default IndexPage
 
@@ -21,9 +24,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    carImages: imageSharp(id: { regex: "^/cars/?(?:[^/]+/?)*$" }) {
-      sizes(maxWidth: 1250, quality: 90) {
-        ...GatsbyImageSharpSizes
+    allImageSharp {
+      edges {
+        node {
+          sizes(maxWidth: 1800) {
+            ...GatsbyImageSharpSizes
+          }
+        }
       }
     }
   }

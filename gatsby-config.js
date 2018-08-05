@@ -17,14 +17,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `cars`,
-        path: `${__dirname}/images/cars/`,
+        path: `${__dirname}/src/images/cars/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
 }
