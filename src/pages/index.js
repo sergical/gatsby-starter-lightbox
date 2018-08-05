@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -13,3 +13,18 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    carImages: imageSharp(id: { regex: "^/cars/?(?:[^/]+/?)*$" }) {
+      sizes(maxWidth: 1250, quality: 90) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
