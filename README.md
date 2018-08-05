@@ -1,5 +1,7 @@
 # gatsby-starter-lightbox
-The default Gatsby starter with lightbox functionality powered by [react-images](https://jossmac.github.io/react-images/).
+The default Gatsby starter with a custom lightbox that uses `gatsby-images` and has on-screen controls as well as listens to keyboard events (ESC, left & right arrows).
+
+[Demo](https://gatsby-lightbox.416serg.me)
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
