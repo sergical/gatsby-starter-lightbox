@@ -72,7 +72,7 @@ class Lightbox extends Component {
           ))}
         </Gallery>
 
-        <LightboxModal visible={showLightbox} onKeyUp={e => this.handleKeyDown(e)}>
+        <LightboxModal visible={showLightbox} onKeyUp={e => this.handleKeyUp(e)}>
           <LightboxContent>
             <Img sizes={images[selectedImage].node.sizes} />
             <Controls>
